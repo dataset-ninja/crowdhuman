@@ -56,13 +56,21 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
-PAPER: Optional[Union[str, List[str]]] = None
+PAPER: Optional[Union[str, List[str]]] = "https://arxiv.org/abs/1805.00123"
 BLOGPOST: Optional[Union[str, List[str]]] = None
 CITATION_URL: Optional[str] = "https://www.crowdhuman.org/#citation"
-AUTHORS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = [
+    "Shuai Shao",
+    "Zijian Zhao",
+    "Boxun Li",
+    "Tete Xiao",
+    "Gang Yu",
+    "Xiangyu Zhang",
+    "Jian Sun",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Megvii Technology, China"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://en.megvii.com/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with value:str to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
