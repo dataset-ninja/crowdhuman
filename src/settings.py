@@ -13,31 +13,37 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "CrowdHuman"
+PROJECT_NAME_FULL: str = "CrowdHuman: A Benchmark for Detecting Human in a Crowd"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Custom(
+    url="https://www.crowdhuman.org/download.html", redistributable=False
+)
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [
+    Domain.Surveillance(),
+    Industry.Robotics(),
+    Industry.Automotive(),
+]
+CATEGORY: Category = Category.Surveillance(extra=Category.SelfDriving())
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2018
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.crowdhuman.org"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 2611113
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/crowdhuman"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
@@ -52,7 +58,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If you have more than the one paper, put the most relatable link as the first element of the list
 PAPER: Optional[Union[str, List[str]]] = None
 BLOGPOST: Optional[Union[str, List[str]]] = None
-CITATION_URL: Optional[str] = None
+CITATION_URL: Optional[str] = "https://www.crowdhuman.org/#citation"
 AUTHORS: Optional[List[str]] = None
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
