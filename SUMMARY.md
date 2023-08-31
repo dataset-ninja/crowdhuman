@@ -4,6 +4,4 @@ The dataset consists of 24388 images with 1344883 labeled objects belonging to 3
 
 Images in the CrowdHuman dataset have bounding box annotations. There are 5018 (21% of the total) unlabeled images (i.e. without annotations). There are 3 splits in the dataset: *test* (5018 images), *train* (15000 images), and *val* (4370 images)The dataset was released in 2018 by the Megvii Technology, China.
 
-Here is the visualized example grid with annotations:
-
-<img src="https://github.com/dataset-ninja/crowdhuman/raw/main/visualizations/horizontal_grid.png">
+<img src="https://github.com/dataset-ninja/crowdhuman/raw/main/visualizations/poster.png">
