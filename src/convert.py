@@ -9,7 +9,6 @@ from urllib.parse import unquote, urlparse
 
 import numpy as np
 import supervisely as sly
-from dataset_tools.convert import unpack_if_archive
 from dotenv import load_dotenv
 from supervisely.io.fs import (
     dir_exists,
@@ -22,6 +21,7 @@ from supervisely.io.fs import (
 from tqdm import tqdm
 
 import src.settings as s
+from dataset_tools.convert import unpack_if_archive
 
 
 def convert_and_upload_supervisely_project(
