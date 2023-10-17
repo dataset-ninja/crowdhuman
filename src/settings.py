@@ -15,7 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "CrowdHuman"
 PROJECT_NAME_FULL: str = "CrowdHuman: A Benchmark for Detecting Human in a Crowd"
-HIDE_DATASET = False  # set False when 100% sure about repo quality
+HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
